@@ -1,0 +1,71 @@
+About This Dashboard
+This dashboard analyzes churn behavior, revenue exposure, and retention opportunities across 7,043 telecom customers. Use the tabs above to navigate from high-level KPIs through to an actionable list of at-risk customers.
+
+Dataset: IBM Telco Customer Churn (public)  | Built with: PostgreSQL, Python, Tableau  | Last Updated: June 2026
+
+Tab 1 — Overview
+What you're looking at: Headline KPIs and a first look at where churn and revenue risk are concentrated.
+How to read it:
+	•	The top row shows six key metrics for the full customer base
+	•	The bar chart shows churn rate by contract type -- month-to-month customers churn at 15x the rate of two-year customers
+	•	The donut chart on the right shows how MRR at risk breaks down by contract -- month-to-month contracts alone account for $120.8K of the $139.1K total
+Start here if: You want the headline numbers before going deeper.
+
+Tab 2 — Churn Analysis
+What you're looking at: Churn rate broken down by four key dimensions, plus a cross-tab showing where contract type and internet service interact.
+Filters available: Dependents, Partner status, Senior Citizen, Tenure Bucket
+How to read it:
+	•	Each bar chart includes a reference line showing the overall average churn rate -- bars above the line are above average risk
+	•	The tenure bucket chart shows the trend line -- churn drops sharply after the first 12 months
+	•	The cross-tab at the bottom is color-coded: darker red = higher churn. The month-to-month + fiber optic cell at 57.9% is the highest-risk combination in the dataset
+What to look for: Which customer profile you want to filter for, then check where their churn rate lands relative to the average.
+
+Tab 3 — Revenue Analysis
+What you're looking at: How monthly revenue is distributed across contract types and internet tiers, and where charges concentrate.
+Filters available: Contract Type, Internet Tier
+How to read it:
+	•	MRR bars are split by retained vs churned revenue -- red portions are already lost
+	•	The CLV chart shows estimated lifetime value by contract type. Two-year customers are worth significantly more over their lifetime
+	•	The scatter plot at the bottom shows revenue concentration -- most customers cluster at lower charge levels, with a small group of high-charge outliers worth monitoring
+Note on CLV: Lifetime value figures are estimated as average monthly charges multiplied by average tenure. They are projections, not modeled values.
+
+Tab 4 — Customer Segmentation
+What you're looking at: The customer base divided into four risk tiers, with breakdowns by household type, demographics, and service count.
+Filters available: Senior Segment, Gender, Contract Type
+Risk tiers defined:
+	•	Churned -- already left (26.5%)
+	•	High Risk -- active, month-to-month, low tenure (13.8%)
+	•	Medium Risk -- active, some risk indicators (17.8%)
+	•	Low Risk -- active, long tenure or annual/two-year contract (41.9%)
+What to look for: The add-on count chart is one of the clearest signals in the dataset. Churn drops from 37.7% at zero add-ons to 5.3% at six or more. Each service a customer subscribes to meaningfully reduces their likelihood of leaving.
+
+Tab 5 — Services
+What you're looking at: Churn rates for subscribers vs non-subscribers across all eight service types, plus service adoption and pricing by tier.
+Filters available: Contract Type, Internet Service
+How to read it:
+	•	For every service type, the red bar (non-subscribers) is taller than the blue bar (subscribers) -- this confirms that service adoption consistently reduces churn
+	•	The adoption rate chart shows which services customers already use most (phone service at 90.3%) and which have room to grow (tech support at 36.6%)
+	•	The avg. monthly charges chart at the bottom shows pricing by internet type and contract -- useful for understanding the revenue profile of each segment
+What to look for: Services with low adoption rates and high churn differences between subscribers and non-subscribers are the strongest candidates for targeted upsell as a retention strategy.
+
+Tab 6 — Explorer & Retention
+What you're looking at: A prioritized list of high-risk customers who have not yet churned, with an estimate of how much revenue can be recovered through retention outreach.
+Filters available: Contract Type, Internet Service, Senior Citizen, Risk Segment, Priority
+How to read it:
+	•	The top KPI row summarizes the filtered group: 970 high-risk customers, 125 flagged as Priority 1, average tenure of 5 months, $47.8K MRR at risk
+	•	Priority 1 customers are ranked by monthly charge value -- highest-revenue customers at greatest risk get flagged first
+	•	The customer detail table lists each individual with their contract type, internet service, payment method, and charge data -- ready for a retention team to action
+	•	The bar chart on the right shows estimated monthly revenue recovered if these customers are retained
+Important: The $47.8K recovery estimate assumes 100% retention success. It is an upper-bound illustration, not a forecast.
+Use this tab if: You are building a retention outreach list or want to prioritize which customers to contact first.
+
+Color Guide
+	•	Red — Churned customers, high churn rates, MRR at risk
+	•	Amber — High risk segments
+	•	Yellow — Retained customers, low churn rates, stable segments
+	•	Blue — Low risk or no-service segments
+
+Tips for Navigation
+•	Filters apply within each tab only -- they reset when you switch tabs
+•	Hover over any chart element for a tooltip with exact values
+•	The color rule is consistent throughout: red = churn risk, blue = retained/stable, gold = medium risk
