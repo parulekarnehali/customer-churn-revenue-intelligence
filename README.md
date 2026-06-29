@@ -256,4 +256,4 @@ python python/08_eda_analysis.py
 
 **Nehali Parulekar** -- Data Analyst | BI Developer
 
-Dover, PA | [LinkedIn](<https://www.linkedin.com/in/nehalip/>) | [Tableau Portfolio](<http://public.tableau.com/app/profile/nehalip>) | nehaliparulekar0395@gmail.com
+[LinkedIn](<https://www.linkedin.com/in/nehalip/>) | [Tableau Portfolio](<http://public.tableau.com/app/profile/nehalip>) | nehaliparulekar0395@gmail.com
