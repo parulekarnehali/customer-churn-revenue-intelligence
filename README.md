@@ -2,7 +2,7 @@
 
 > An end-to-end analytics project covering data ingestion, warehouse design, SQL analysis, Python EDA, and a Tableau story dashboard — built on the IBM Telco Customer Churn dataset.
 
-**[View Live Dashboard on Tableau Public](<insert-your-tableau-public-link-here>)**
+**[View Live Dashboard on Tableau Public](<[insert-your-tableau-public-link-here](https://public.tableau.com/app/profile/nehalip/viz/CustomerChurnRevenueIntelligencePlatform/Story1?publish=yes)>)**
 
 ---
 
