@@ -29,8 +29,8 @@ It is structured as a full analytics pipeline — from raw CSV to a stakeholder-
 ```
 customer-churn-revenue-intelligence/
 │
-├── data/
-│   └── WA_Fn-UseC_-Telco-Customer-Churn.csv     # Source dataset (Kaggle / IBM)
+├── raw data/
+│   └── Raw_Telco-Customer-Churn.csv     # Source dataset (Kaggle / IBM)
 │
 ├── sql/
 │   ├── 02_database_setup.sql                     # DB + schema creation (raw, staging, dw)
